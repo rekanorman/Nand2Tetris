@@ -1,0 +1,28 @@
+public class JackAnalyser {
+	
+	/**
+	 * Takes a .jack filename, or a directory containing zero
+	 * or more .jack files as a command-line argument.
+	 * For each .jack file:
+	 * - creates a JackTokenizer for the file
+	 * - creates a new .xml file with the same name in the
+	 * 		same directory and prepares it for writing
+	 * - creates and uses a CompilationEngine to compile the
+	 * 		input from the tokenizer into the output .xml file. 
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		if (args.length != 1) {
+			throw new RuntimeException("Argument must be a single file or directory name");
+		}
+		
+		String fileOrDirectory = args[0];
+		
+		// For now, assume it is a single .jack filename
+		String filename = fileOrDirectory;
+		
+		
+	}
+	
+}

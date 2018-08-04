@@ -1,0 +1,50 @@
+import java.io.File;
+
+public class VMWriter {
+	
+	private PrintWriter out;
+	
+	/**
+	 * Creates a new VMWriter which writes VM code to the given
+	 * output file.
+	 * @param outputFile	The output file to write VM code to.
+	 */
+	public VMWriter(File outputFile) {
+		
+	}
+	
+	/**
+	 * Writes a push command using the given memory segment and index
+	 * to the output file.
+	 * @param segment	The memory segment to be used in the push command.
+	 * @param index		The memory index to be used in the push command.
+	 */
+	public void writePush(Segment segment, int index) {
+		
+	}
+	
+	/**
+	 * Writes a pop command using the given memory segment and index
+	 * to the output file.
+	 * @param segment	The memory segment to be used in the pop command.
+	 * @param index		The memory index to be used in the pop command.
+	 */
+	public void writePop(Segment segment, int index) {
+		
+	}
+	
+	/**
+	 * Writes the given VM arithmetic or logical command to the output file.
+	 * @param command	The command to write.
+	 */
+	public void writeArithmetic(Command command) {
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,102 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class JackAnalyser {
+	
+	/**
+	 * Takes a File object representing a single xxx.jack file, creates a
+	 * JackTokenizer from the file, and outputs all the tokens into a
+	 * new file called myxxxT.xml in the same directory as the jack file.
+	 * @param jackFile	The .jack file to tokenize.
+	 */
+	private static void generateTokenFile(File jackFile) {
+		JackTokenizer tokenizer = new JackTokenizer(jackFile);
+		
+		String outputFilename = "my" + jackFile.getName().replace(".jack", "T.xml");
+		File outputFile = new File(jackFile.getParentFile(), outputFilename);
+		
+		try {
+			outputFile.createNewFile();
+			FileWriter out = new FileWriter(outputFile);
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+	
+	/**
+	 * Takes a .jack filename, or a directory containing zero
+	 * or more .jack files as a command-line argument.
+	 * For each .jack file:
+	 * - creates a JackTokenizer for the file
+	 * - creates a new .xml file with the same name in the
+	 * 		same directory and prepares it for writing
+	 * - creates and uses a CompilationEngine to compile the
+	 * 		input from the tokenizer into the output .xml file. 
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		if (args.length != 1) {
+			throw new RuntimeException("Argument must be a single file or directory name");
+		}
+		
+		String fileOrDirectory = args[0];
+		ArrayList<File> jackFiles = new ArrayList<File>();
+		
+		if (fileOrDirectory.endsWith(".jack")) {
+			String filename = fileOrDirectory;
+			jackFiles.add(new File(filename));
+			
+		} else {
+			File directory = new File(fileOrDirectory);
+			System.out.println(directory.isDirectory());
+			for (String filename: directory.list()) {
+				if (filename.endsWith(".jack")) {
+					jackFiles.add(new File(filename));
+				}
+			}
+		}
+		
+		for (File jackFile: jackFiles) {
+			generateTokenFile(jackFile);
+		}
+		
+		// For now, assume it is a single .jack filename
+//		String filename = fileOrDirectory;
+		
+		// Convert xxx.jack filename String to the appropriate File object
+		// Use this to create a new JackTokenizer
+//		try {
+//			File f = new File("file1.txt");
+//			System.out.println(f.getAbsolutePath());
+//			System.out.println(f.canWrite());
+//			System.out.println(f.canRead());
+//			System.out.println(f.createNewFile());
+//			System.out.println(f.canWrite());
+//			System.out.println(f.canRead());
+			
+//			File d = new File("Square");
+//			System.out.println(Arrays.toString(d.list()));
+			
+			
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+
+	}
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;identifier1&apos; in &apos;CompilationEngine.compileDo()&apos; to &apos;identifier&apos;&#x0D;&#x0A;- Original project: &apos;Compiler&apos;&#x0D;&#x0A;- Original element: &apos;CompilationEngine.compileDo().identifier1&apos;&#x0D;&#x0A;- Renamed element: &apos;identifier1&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;identifier1&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{CompilationEngine.java[CompilationEngine~compileDo@identifier1!15685!15728!15692!15702!QString;!0!false" name="identifier" references="true" stamp="1529811055959" version="1.0"/>
+</session>

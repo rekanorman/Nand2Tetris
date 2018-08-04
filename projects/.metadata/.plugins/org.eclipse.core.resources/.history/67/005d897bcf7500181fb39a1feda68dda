@@ -1,0 +1,45 @@
+public class SymbolTable {
+	
+	/**
+	 * Creates a new SymbolTable.
+	 */
+	public SymbolTable() {
+		
+	}
+	
+	/**
+	 * Enters the scope of a new subroutine by resetting the
+	 * subroutine symbol table.
+	 * Called when the compilation of a new subroutine is
+	 * started.
+	 */
+	public void startSubroutine() {
+		
+	}
+	
+	/**
+	 * Adds a new variable with the given name, type and kind to
+	 * the symbol table, and assigns it a running index, based on its
+	 * kind.
+	 * Variables of kind STATIC or FIELD are added to the class level
+	 * symbol table, while those of kind ARG or VAR are added to the
+	 * subroutine level symbol table.
+	 * Called when a variable declaration is compiled.
+	 * @param name	The identifier of the variable.
+	 * @param type	The type of the variable (one of the primitive types
+	 * 					or a class name).
+	 * @param kind	One of the values STATIC, FIELD, ARG and VAR.
+	 */
+	public void define(String name, String type, Kind kind) {
+		
+	}
+	
+	public int varCount(Kind kind) {
+		
+	}
+	
+	
+	
+	
+	
+}

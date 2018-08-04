@@ -1,0 +1,10 @@
+public class SymbolTable {
+	
+	/**
+	 * Creates a new SymbolTable.
+	 */
+	public SymbolTable() {
+		
+	}
+	
+}
